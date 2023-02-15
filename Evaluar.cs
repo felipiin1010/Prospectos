@@ -51,7 +51,7 @@ namespace Prospectos
             Item i =(Item) txtcombo.SelectedItem;
             if (i.valor == "Rechazado")
             {
-                Connexion.GuardarEstatus(prospecto.ToString(), i.id.ToString(), txtobservaciones.ToString());
+                Connexion.GuardarEstatus(prospecto.ToString(), i.id.ToString(), txtobservaciones.Text.ToString());
             }
             else 
             {

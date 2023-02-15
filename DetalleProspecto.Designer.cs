@@ -217,8 +217,9 @@ namespace Prospectos
             // txtObservaciones
             // 
             this.txtObservaciones.Location = new System.Drawing.Point(452, 76);
+            this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(100, 20);
+            this.txtObservaciones.Size = new System.Drawing.Size(100, 68);
             this.txtObservaciones.TabIndex = 38;
             // 
             // lblEstatus
