@@ -58,6 +58,7 @@ namespace Prospectos
             this.tabcaptura = new System.Windows.Forms.TabPage();
             this.tabListado = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabcaptura.SuspendLayout();
             this.tabListado.SuspendLayout();
@@ -133,9 +134,9 @@ namespace Prospectos
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(333, 200);
+            this.button1.Location = new System.Drawing.Point(369, 205);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.Size = new System.Drawing.Size(58, 23);
             this.button1.TabIndex = 9;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
@@ -230,6 +231,7 @@ namespace Prospectos
             this.button2.TabIndex = 19;
             this.button2.Text = "Cerrar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button2_MouseClick);
             // 
             // button3
@@ -256,9 +258,8 @@ namespace Prospectos
             this.lbldocumento.AutoSize = true;
             this.lbldocumento.Location = new System.Drawing.Point(46, 200);
             this.lbldocumento.Name = "lbldocumento";
-            this.lbldocumento.Size = new System.Drawing.Size(106, 13);
+            this.lbldocumento.Size = new System.Drawing.Size(0, 13);
             this.lbldocumento.TabIndex = 22;
-            this.lbldocumento.Text = "estetextoesdeprueba";
             // 
             // lbldocumentoNombre
             // 
@@ -281,6 +282,7 @@ namespace Prospectos
             // 
             // tabcaptura
             // 
+            this.tabcaptura.Controls.Add(this.label2);
             this.tabcaptura.Controls.Add(this.txtNombre);
             this.tabcaptura.Controls.Add(this.button2);
             this.tabcaptura.Controls.Add(this.button3);
@@ -335,6 +337,15 @@ namespace Prospectos
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView_RowsAdded);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(333, 180);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Cargar documento";
+            // 
             // CapturaProspecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,6 +396,7 @@ namespace Prospectos
         private System.Windows.Forms.TabPage tabcaptura;
         private System.Windows.Forms.TabPage tabListado;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

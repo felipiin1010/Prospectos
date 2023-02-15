@@ -10,7 +10,7 @@ namespace Prospectos
 {
     static class Connexion
     {
-        static string connectionString = "Data Source=localhost;Initial Catalog=Pruebas;User ID=sa";
+        static string connectionString = "Data Source=10.10.9.15;Initial Catalog=VacacionesPruebas;User ID=sa;Password=pepeeltoro1#";
 
         public static Perfil Acceso(string @usuario, string @clave)
         {

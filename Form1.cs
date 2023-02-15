@@ -55,24 +55,18 @@ namespace Prospectos
         
         private void button3_Click(object sender, EventArgs e)
         {
-
             if (ValidaCamposRequeridos())
             {
-                int @prospectoid = Connexion.GuardarProspecto(txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text, txtCalle.Text, txtNumero.Text, txtColonia.Text, txtCp.Text, txtTelefono.Text, txtRFC.Text,LOGIN.perfil.GetUsuario());
-
+                int @prospectoid = Connexion.GuardarProspecto(txtNombre.Text, txtApPaterno.Text, txtApMaterno.Text, txtCalle.Text, txtNumero.Text, txtColonia.Text, txtCp.Text, txtTelefono.Text, txtRFC.Text, LOGIN.perfil.GetUsuario());
                 string[] arreglo = lbldocumento.Text.Split('\n');
-                //var rutasdelimitadas = "";
                 for (int i = 1; i < arreglo.Length; i++)
                 {
                     string extension = arreglo[i].Split('.')[1];
-                    //Generar un id para el archivo
-                    string nombre = (@prospectoid).ToString()+"_"+ i.ToString();
+                    string nombre = (@prospectoid).ToString() + "_" + i.ToString();
                     System.IO.File.Copy(arreglo[i], "./" + nombre + "." + extension, true);
-                    string currentDirectory = Directory.GetCurrentDirectory()+"\\";
-                    //rutasdelimitadas += currentDirectory+nombre+"."+extension + "-";
+                    string currentDirectory = Directory.GetCurrentDirectory() + "\\";
                     Connexion.GuardarDocumentos(prospectoid.ToString(), currentDirectory + nombre + "." + extension);
                 }
-                //Connexion.GuardarDocumentos(prospectoid.ToString(), rutasdelimitadas);
                 LImpiacampos();
             }
         }
@@ -94,7 +88,8 @@ namespace Prospectos
         }
         private void LImpiacampos()
         {
-            foreach (TextBox txt in this.Controls.OfType<TextBox>())
+            ControlCollection c = (ControlCollection)this.Controls;
+            foreach (Control txt in tabControl1.SelectedTab.Controls.OfType<TextBox>())
             {
                 txt.Text = "";
             }
